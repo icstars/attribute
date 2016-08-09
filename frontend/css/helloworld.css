@@ -1,7 +1,15 @@
-.content {
-  margin: 0 auto;
-  width: 60%;
+div {
+  display:block;
 }
+
+
+
+button {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  color:#ffb400;
+  
+}
+
 
 #hiddenMessage {
   padding: 10px;
