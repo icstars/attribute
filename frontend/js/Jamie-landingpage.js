@@ -7,7 +7,7 @@ $(document).ready(function(){
         $(".fbsignup").hide();
     
     $(".playbutton").click(function(){
-         $(".guestprompt").show();
+        $(".guestprompt").show();
         $(".signupbutton").show();
         $(".fbsignup").show();
 });
