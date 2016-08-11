@@ -1,0 +1,161 @@
+body {
+	background-position:fixed;
+	background-repeat: no-repeat;
+    background-image: url("https://preview.c9users.io/kateryzhenko/tw_workshop1/frontend/img/1.jpg?_c9_id=livepreview3&_c9_host=https://ide.c9.io");
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.planet1 {
+	margin-left: 45%;
+	margin-top: 5%;
+	width: 10%;
+}
+
+.planet2 {
+	margin-left: 55%;
+	width: 15%;
+}
+
+.planet3 {
+	margin-left: 35%;
+	margin-top:-3%; 
+	width: 20%;
+}
+
+.planet4 {
+	margin-left: 45%;
+	width: 15%;
+}
+
+.planets {
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	margin-top: -3%;
+}
+
+
+
+
+
+
+
+.button1 {
+	
+	margin: auto;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #3D59AB;
+	font-family: Verdana, sans-serif;
+}
+
+span {
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+
+
+.button2 {
+	margin: auto;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #3D59AB;
+	font-family: Verdana, sans-serif;
+}
+
+span {
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .planets {
+		width: 90%;
+	}
+
+	.planet1 {
+		margin-right: 20%;
+		width: 30%;
+	}
+
+	.planet2 {
+		margin-left: 35%;
+		width: 40%;
+	}
+
+	.planet3 {
+		margin-right: 30%;
+		width: 35%;
+	}
+
+	.planet4 {
+		margin-left: 35%;
+		width: 30%;
+	}
+
+	.planets {
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+	}
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+    .planets {
+		width: 90%;
+	}
+
+	.planet1 {
+		margin-top: 20%;
+		margin-right: 60%;
+		width: 35%;
+	}
+
+	.planet2 {
+		margin-left: 45%;
+		width: 40%;
+	}
+
+	.planet3 {
+		margin-right: 45%;
+		width: 35%;
+	}
+
+	.planet4 {
+		margin-left: 45%;
+		width: 30%;
+	}
+
+	.planets {
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+	}
+}
+
+.planets hover{
+	border-color: white;
+}
