@@ -159,3 +159,19 @@ span {
 .planets hover{
 	border-color: white;
 }
+
+
+
+
+
+
+
+
+
+p {
+	font-family: Verdana;
+	font-size: 30px;
+	font-style: oblique;
+	font-weight: bold;
+	color: yellow;
+}

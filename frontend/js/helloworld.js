@@ -1,9 +1,11 @@
 'use strict'
 
 $(document).ready(function(){
-	$('#menuoptions').click(function(val){
-	
-	});
+$('#hiddenMessageBtn').click(function(val){
+var name = $('#name').val();
+$('#hiddenMessage').show();
+$('#insertName').html(name);
+});
 });
 'use strict'
 
