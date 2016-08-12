@@ -2,18 +2,19 @@
 $(document).ready(function(){
     
     
-        $("").hide();
+        $(".name").hide();
         $(".gobutton").hide();
         
     
     $(".BeanBean").click(function(){
-        $("").show();
+        $(".name").show();
         $(".gobutton").show();
     });
     
-    function enteryourname() {
+    /*function enteryourname() {
         if()
-    }
+     }
+    }*/
 });
 
 

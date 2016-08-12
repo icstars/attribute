@@ -6,7 +6,7 @@ body {
     background-color: #f2632c;
     height: 100%;
     overflow-y: hidden;
-    
+    background-position:top center;
 }
 .BeanBeanLogo {
     height:190px;
@@ -16,7 +16,7 @@ body {
     margin-right: auto;
 }
 .BeanBean {
-    height:450px;
+    height:350px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -28,12 +28,13 @@ body {
 }
 
 .name {
-    display: block;
+    
     margin-left:auto;
     margin-right: auto;
     text-align: center;
-    
+    display:block;
 }
+
 
 .gobutton {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
