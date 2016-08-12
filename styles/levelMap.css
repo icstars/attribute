@@ -1,7 +1,7 @@
 body {
 	background-position:fixed;
 	background-repeat: no-repeat;
-    background-image: url("https://preview.c9users.io/kateryzhenko/tw_workshop1/frontend/img/1.jpg?_c9_id=livepreview3&_c9_host=https://ide.c9.io");
+    background-image: url("../images/gameMapbackdrop.jpg");
     height: 100%;
     overflow-y: hidden;
 }
