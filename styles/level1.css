@@ -4,16 +4,17 @@ html, body {
   margin: 0px;
 }
 
-.gamecanvas {
+#gamecanvas {
   width:  100%;
   height: 100%;
   margin: 0px;
-  background-color:#3d90ec; 
+  background-color:#3d90ec;
+  position: relative;
 }
 
 #avatar {
   height:100px;
   width:100px;
   background-color:#000;
-  position: absolute;
+  position: absolute top:140px; left:140px;
 }
