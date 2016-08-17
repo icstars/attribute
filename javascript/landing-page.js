@@ -6,9 +6,10 @@ $(document).ready(function(){
         $(".gobutton").hide();
         
     //BeanBean growing and shrinking animation
+    var $p = $('.intro')
     var $img = $('.BeanBean'),
         scale = 1.1,
-        h = $img.height(),
+        h = $img.height(), 
         sh = h*scale;
 
     function scaleUp($elt){
@@ -22,6 +23,10 @@ $(document).ready(function(){
             scaleUp($elt);
         });
     }
+    
+    scaleUp($img); 
+
+
         
     //Click avatar for intro bubble
     $(".BeanBean").one("click", function(){
@@ -29,29 +34,16 @@ $(document).ready(function(){
         $(".BeanBean").stop(); //stop animation on click
     });
     
-    //intro growing and shrinking animation
-    /*var $p = $('.intro'),
-        scale = 1.1,
-        h = $p.height(),
-        sh = h*scale;
-
-    function scaleUp($elt){
-        $elt.animate({height: sh}, function (){
-            scaleDown($elt);
-        });
-    }
-
-    function scaleDown($elt){
-        $elt.animate({height: h}, function (){
-            scaleUp($elt);
-        });
-    }*/
+    
+    
     
     $(".intro").click(function(){
         $(".name").show();
         $(".gobutton").show();
         $(".intro").hide();
     });
+    
+    
     
     //will only allow lower-case letters a-z and numbers 1-9
     $(".name").bind('keyup blur',function(){ 
@@ -60,7 +52,6 @@ $(document).ready(function(){
     );
    
 
-    scaleUp($img); 
     
     //star animation
     var limit=35, // Max number of stars

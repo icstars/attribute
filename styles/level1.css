@@ -1,19 +1,79 @@
-body {
-    background-color: #FFF;
-    margin: 30px;
-    margin-top: 10px;
-}
+
 #contentContainer {
-    width: 1280px;
-    height: 800px;
-    border: 5px black solid;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    background: #090159; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, #010002 , #1f1a51); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, #010002, #1f1a51); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, #010002, #1f1a51); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#010002 , #1f1a51); /* Standard syntax (must be last) */
     cursor: pointer;
+    position: absolute; 
+    top: 0; 
+    left: 0;
 }
-#thing {
+#avatar {
+    height: 80px;
     position: relative;
     left: 50px;
     top: 50px;
     transition: left .5s ease-in, top .5s ease-in;
+    
+}
+
+.star {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    z-index: 3;
+    animation: glitter 4.5s linear 0s infinite normal;
+    -webkit-animation: glitter 4.5s linear 0s infinite normal;
+    -moz-animation: glitter 4.5s linear 0s infinite normal;
+    -ms-animation: glitter 4.5s linear 0s infinite normal;
+    -o-animation: glitter 4.5s linear 0s infinite normal;
+}
+.star-top,.star-bottom{
+ position: absolute;
+ display: block;
+}
+.star-top:before , 
+.star-top:after ,
+.star-bottom:before ,
+.star-bottom:after{
+ content: "";
+ width: 15px;
+ height: 15px;
+ background:#d8ff00;
+ border-radius: 50%;
+ position: absolute;
+}
+
+/*CSS3 pseudo class for positioning curves*/
+
+/*CSS3 keyframes for glittering effect*/
+@-webkit-keyframes glitter {
+ 0%   { -webkit-transform: scale(1.0); opacity: 1; }
+ 25%  { -webkit-transform: scale(0.5); opacity: 0; }
+ 50%  { -webkit-transform: scale(1.0); opacity: 1; }
+ 75%  { -webkit-transform: scale(0.5); opacity: 0; }
+ 100% { -webkit-transform: scale(1.0); opacity: 1; }
+}
+@-moz-keyframes glitter {
+ 0%   { -moz-transform: scale(1.0); opacity: 1; }
+ 25%  { -moz-transform: scale(0.5); opacity: 0; }
+ 50%  { -moz-transform: scale(1.0); opacity: 1; }
+ 75%  { -moz-transform: scale(0.5); opacity: 0; }
+ 100% { -moz-transform: scale(1.0); opacity: 1; }
 }

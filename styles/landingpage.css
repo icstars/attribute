@@ -26,8 +26,6 @@ body {
 }
 
 
-
-
 .intro {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     color:#bad75b;
@@ -74,6 +72,7 @@ body {
     border-radius: 5px;
     box-shadow:0px 0px 5px #595959;
     z-index: 1;
+    text-decoration: none;
 }
 
 .gobutton:hover {
@@ -111,6 +110,7 @@ body {
  border-radius: 50%;
  position: absolute;
 }
+
 /*CSS3 pseudo class for positioning curves*/
 
 /*CSS3 keyframes for glittering effect*/
