@@ -1,1 +1,1 @@
-<?php include_once("landing-page.html"); ?>
+<?php include_once("views/landing-page.html"); ?>
