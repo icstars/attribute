@@ -43,15 +43,22 @@
   };
 }
 
-   
+$(function(){
+  var y = 0;
+    setInterval(function(){
+        y -= 1;
+        $('#contentContainer').css('background-position', y + 'px 0');
+    }, 10)  
+})
+    
     //star animation
-    var limit=35, // Max number of stars
+  var limit=35, // Max number of stars
     body=document.body;
         loop={
          //initilizeing
         start:function(){
         for (var i=0; i <= limit; i++) {
-        var star=this.newStar();
+        star=this.newStar();
         star.style.top=this.rand()*100+"%";
         star.style.left=this.rand()*100+"%";
         star.style.webkitAnimationDelay=this.rand()+"s";
@@ -73,9 +80,13 @@
 };
     loop.start();
     //end of star animation
+var contentContainer = $("#contentContainer");
+var myScore;
 
-
-
-
+function startGame() {
+  avatar = new component(30, 30, "red", 10, 160);
+  avatar = new component("30px", "Consolas", "black", 280, 40, "text");
+  contentContainer.start();
+}
 
 

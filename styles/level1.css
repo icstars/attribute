@@ -10,16 +10,14 @@
     position: absolute; 
     top: 0; 
     left: 0;
-    background: #090159; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top, #010002 , #1f1a51); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top, #010002, #1f1a51); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top, #010002, #1f1a51); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#010002 , #1f1a51); /* Standard syntax (must be last) */
+    background-image:url("../images/Space.jpg");
+    background-repeat: repeat-y;
     cursor: pointer;
     position: absolute; 
     top: 0; 
     left: 0;
 }
+
 #avatar {
     height: 80px;
     position: relative;
@@ -29,7 +27,7 @@
     
 }
 
-.star {
+/*.star {
     display: block;
     position: absolute;
     top: 100%;
@@ -46,25 +44,25 @@
     -o-animation: glitter 4.5s linear 0s infinite normal;
 }
 .star-top,.star-bottom{
- position: absolute;
- display: block;
+    position: absolute;
+    display: block;
 }
 .star-top:before , 
 .star-top:after ,
 .star-bottom:before ,
 .star-bottom:after{
- content: "";
- width: 5px;
- height: 5px;
- background:#d8ff00;
- border-radius: 100%;
- position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background:#d8ff00;
+    border-radius: 100%;
+    position: absolute;
 }
 
 /*CSS3 pseudo class for positioning curves*/
 
 /*CSS3 keyframes for glittering effect*/
-@-webkit-keyframes glitter {
+/*@-webkit-keyframes glitter {
  0%   { -webkit-transform: scale(1.0); opacity: 1; }
  25%  { -webkit-transform: scale(0.5); opacity: 0; }
  50%  { -webkit-transform: scale(1.0); opacity: 1; }
@@ -77,4 +75,4 @@
  50%  { -moz-transform: scale(1.0); opacity: 1; }
  75%  { -moz-transform: scale(0.5); opacity: 0; }
  100% { -moz-transform: scale(1.0); opacity: 1; }
-}
+}*/
