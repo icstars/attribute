@@ -3,15 +3,14 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /*background-color: #F2F2F2;*/
+    background-color: #F2F2F2;
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: absolute; 
     top: 0; 
     left: 0;
-    background-image:url("../images/Space.jpg");
-    background-repeat: repeat-y;
+    background-color: black;
     cursor: pointer;
     position: absolute; 
     top: 0; 
@@ -27,7 +26,7 @@
     
 }
 
-/*.star {
+.star {
     display: block;
     position: absolute;
     top: 100%;
@@ -62,7 +61,7 @@
 /*CSS3 pseudo class for positioning curves*/
 
 /*CSS3 keyframes for glittering effect*/
-/*@-webkit-keyframes glitter {
+@-webkit-keyframes glitter {
  0%   { -webkit-transform: scale(1.0); opacity: 1; }
  25%  { -webkit-transform: scale(0.5); opacity: 0; }
  50%  { -webkit-transform: scale(1.0); opacity: 1; }
@@ -75,4 +74,4 @@
  50%  { -moz-transform: scale(1.0); opacity: 1; }
  75%  { -moz-transform: scale(0.5); opacity: 0; }
  100% { -moz-transform: scale(1.0); opacity: 1; }
-}*/
+}
