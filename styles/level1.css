@@ -3,23 +3,20 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /*background-color: #F2F2F2;*/
+    background-color: #F2F2F2;
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: absolute; 
     top: 0; 
     left: 0;
-    background: #090159; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top, #010002 , #1f1a51); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top, #010002, #1f1a51); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top, #010002, #1f1a51); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#010002 , #1f1a51); /* Standard syntax (must be last) */
+    background-color: black;
     cursor: pointer;
     position: absolute; 
     top: 0; 
     left: 0;
 }
+
 #avatar {
     height: 80px;
     position: relative;
@@ -46,19 +43,19 @@
     -o-animation: glitter 4.5s linear 0s infinite normal;
 }
 .star-top,.star-bottom{
- position: absolute;
- display: block;
+    position: absolute;
+    display: block;
 }
 .star-top:before , 
 .star-top:after ,
 .star-bottom:before ,
 .star-bottom:after{
- content: "";
- width: 5px;
- height: 5px;
- background:#d8ff00;
- border-radius: 100%;
- position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background:#d8ff00;
+    border-radius: 100%;
+    position: absolute;
 }
 
 /*CSS3 pseudo class for positioning curves*/
