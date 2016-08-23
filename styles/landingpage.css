@@ -31,18 +31,40 @@ body {
     color:#bad75b;
     position:relative;
     width: 210px;
-    height: 100px;
-    bottom:350px;
+    height: 40px;
+    bottom:370px;
+    left: 170px;
     margin-left:auto;
     margin-right: auto;
     text-align: center;
-    line-height: 100px;
+    line-height: 50px;
     border-radius: 55px;
     background-color:#f4f4f4;
     font-size:18px;
-    display: block;
+    display: auto;
     z-index: 1;
     
+}
+#hello{
+    bottom: 380px;
+}
+.briefOverview {
+    font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    color:#bad75b;
+    position:relative;
+    width: 240px;
+    height: 100px;
+    bottom:230px;
+    right: 200px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    background-color:#f4f4f4;
+    font-size:18px;
+    display: block ;
+    z-index: 1;
 }
 .name {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
