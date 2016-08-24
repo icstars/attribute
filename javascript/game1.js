@@ -26,7 +26,7 @@ function moveLeft() {
 
 function moveDown() {
     var object = $("#object")
-    var downPosition = parseInt(object.css("bottom"), 10);
+    var downPosition = parseInt(object.css("bottom"), 5);
     var newdownPosition = (downPosition - 50) + "px";
     object.css("bottom", newdownPosition);
 }
