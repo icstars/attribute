@@ -1,5 +1,11 @@
+    var img = new Image();
 
+    img.onload = function() {
+    div.appendChild(img);
+        };
 
+    img.src = '../images/BeanBean-02.png';
+    
     var avatar = document.querySelector("#avatar");
     var container = document.querySelector("#contentContainer");
  
@@ -37,19 +43,155 @@
  
     el = el.offsetParent;
   }
+    
+ 
   return {
     x: xPos,
     y: yPos
   };
 }
 
-$(function(){
+    $(function(){
   var y = 0;
     setInterval(function(){
         y -= 1;
         $('#contentContainer').css('background-position', y + 'px 0');
     }, 10)  
 })
+
+///////////////////////
+    var contentContainer,
+   ctx,
+   width = 600,
+   height = 600,
+   enemyTotal = 6,
+   enemies = [],
+   enemy_x = 50,
+   enemy_y = 0,
+   enemy_w = 50,
+   enemy_h = 50,
+   speed = 3,
+   score = 0,
+   gameover = false,
+   rightKey = false,
+   leftKey = false,
+   upKey = false,
+   downKey = false,
+   ship_x = (width / 2) - 25, ship_y = height - 75, ship_w = 50, ship_h = 50;
+
+for (var i = 0; i < enemyTotal; i++) {
+enemies.push([enemy_x, enemy_y, enemy_w, enemy_h, speed]);
+enemy_x += enemy_w + 30;
+enemy_y = Math.random()*100;
+}
+
+function clearCanvas() {
+ctx.clearRect(50,50,width,height);
+}
+
+function drawEnemies() {
+for (var i = 0; i < enemies.length; i++) {
+               ctx.fillStyle = '#f00';
+  ctx.fillRect(enemies[i][0], enemies[i][1], enemy_w, enemy_h);
+}
+}
+
+
+function moveEnemies() {
+ for (var i = 0; i < enemies.length; i++) {
+  if (enemies[i][1] < height) {
+    enemies[i][1] += enemies[i][4];
+  } else if (enemies[i][1] > height - 1) {
+     enemies[i][1] = -45;
+   }
+ }
+}
+
+function detectCollisions() {
+ for (var i = 0; i < enemies.length; i++) {
+     var enemy = enemies[i];
+     var enemyX = enemy[0];
+     var enemyY =enemy[1];
+     var position = getPosition(avatar) ;
+    
+    enemyX = enemyX + enemy_w / 2;
+    enemyY = enemyY - enemy_h / 2;
+    var xPos = 120 / 2 + position.x;
+    var yPos = 80 /2 + position.y;
+
+    
+    var isCloseOnXPosition = Math.abs(xPos - enemyX) < 20;
+    var isCloseOnYPosition = Math.abs(yPos - enemyY) < 20;
+     
+    var rect = avatar.getBoundingClientRect();
+    var rect_top = rect.top;
+    var rect_bottom = rect.bottom;
+    var rect_left = rect.left;
+    var rect_right = rect.right;
+    
+    
+    
+    
+     if (isCloseOnXPosition && isCloseOnYPosition) {
+           score += 1;
+           console.log("Your Score: ", score);
+         ctx.fillStyle = '#f0f';
+         ctx.fillRect(0, 0, 30, 30);
+         enemy[1] = Math.random()*100;
+         if(score > 10){
+             gameover = true;
+         }
+     }
+     //get enemy's x and y location
+     //get the ship's x and y location
+     //compare them
+     //if they're close
+     //make score increment
+  
+ }
+}
+function init() {
+ contentContainer = document.getElementById('canvas');
+ ctx = contentContainer.getContext('2d');
+ setInterval(gameLoop, 25);
+ document.addEventListener('keydown', keyDown, false);
+ document.addEventListener('keyup', keyUp, false);
+}
+
+function gameLoop() {
+ if (!gameover) {
+     clearCanvas();
+     moveEnemies();
+     drawEnemies();
+     detectCollisions();
+ } else {
+     console.log("YOU WON!")
+ }
+}
+
+function keyDown(e) {
+ if (e.keyCode == 39) rightKey = true;
+ else if (e.keyCode == 37) leftKey = true;
+ if (e.keyCode == 38) upKey = true;
+ else if (e.keyCode == 40) downKey = true;
+}
+
+function keyUp(e) {
+ if (e.keyCode == 39) rightKey = false;
+ else if (e.keyCode == 37) leftKey = false;
+ if (e.keyCode == 38) upKey = false;
+ else if (e.keyCode == 40) downKey = false;
+}
+
+window.onload = init;
+//////////////////
+    
+    
+    
+    
+    
+    
+    
     
     //star animation
   var limit=35, // Max number of stars
@@ -88,5 +230,3 @@ function startGame() {
   avatar = new component("30px", "Consolas", "black", 280, 40, "text");
   contentContainer.start();
 }
-
-
