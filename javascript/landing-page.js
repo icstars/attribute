@@ -7,9 +7,34 @@ $(document).ready(function(){
         $(".gobutton").hide();
         
         
+            //beanbeanlogo animation
+    
+    var $bblogo = $('.BeanBeanLogo'),
+        logoScale = 1.1,
+        logoHeight = $bblogo.height(), 
+        logoFormula = logoHeight*logoScale;
+        
+
+    function logoScaleUp($logo){
+        $logo.animate({height: logoFormula}, function (){
+            logoScaleDown($logo);
+            
+        });
+    }
+
+    function logoScaleDown($logo){
+        $logo.animate({height: logoHeight}, function (){
+            logoScaleUp($logo);
+        });
+    }
+    
+    logoScaleUp($bblogo);
+        
+            //beanbeanlogo animation end
+        
             //BeanBean growing and shrinking animation
             
-    var $p = $('.intro')
+    
     var $img = $('.BeanBean'),
         scale = 1.1,
         h = $img.height(), 
@@ -36,7 +61,8 @@ $(document).ready(function(){
             
     $(".BeanBean").one("click", function(){
         $(".intro").show();
-        $(".BeanBean").stop(); //stop animation on click
+        $(".BeanBean").stop(); 
+        $(".BeanBeanLogo").stop();
     });
             //end of beanbean click function
     
@@ -48,10 +74,29 @@ $(document).ready(function(){
         scale_test = 1.3,
         t = $hello.height(), 
         test = t*scale_test;
-
+        tBot = $hello.width();
+        botTest = tBot*scale_test;
+    
+            //function that spreads width left
+        /*    
+    function testWidL($test){
+        $test.animate({width: botTest}, function (){
+            testWidR($test)  
+        });
+    }
+    
+            //function that spreads width right
+    
+    function testWidR($test){
+        $test.animate({width: tBot}, function (){
+            testWidL($test);
+        });
+    }
+        */
     function scale_t_Up($test){
         $test.animate({height: test}, function (){
             scale_t_Down($test);
+            
         });
     }
 
@@ -61,8 +106,8 @@ $(document).ready(function(){
         });
     }
     
-    scale_t_Up($hello);
-    
+    setInterval(scale_t_Up($hello), 1000);
+    //setInterval(testWidL($hello), 1000);
             //end of bubble1 animation
     
             //bubble1 click function
@@ -100,13 +145,18 @@ $(document).ready(function(){
             //bubble2 click function
     
     $(".briefOverview").one("click", function() {
-        scaleUp($img);
+        logoScaleUp($bblogo);
         $(".gobutton").show();
         $(".name").show();
         $(".briefOverview").hide();
         $(".briefOverview").stop();
         
     });
+            //end of bubble2 click function
+        
+    
+    
+    
    
         
          //star animation

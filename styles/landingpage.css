@@ -45,9 +45,8 @@ body {
     z-index: 1;
     
 }
-#hello{
-    bottom: 380px;
-}
+
+
 .briefOverview {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     color:#bad75b;
