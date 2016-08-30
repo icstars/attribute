@@ -1,120 +1,77 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!--the meta tag and the content selector allows the page to somewhat mobile responsive, 
-	more coding is required to access this information it is in our shared google document named 
-	Game Research-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="icon" type="image/png" href="../images/BeanBean-01.png">
-	
-	<meta charset="utf-8">
-	
-	<title>level_map</title>
-	
-	<link rel="stylesheet" type="text/css" href="../styles/levelMap.css">
-	<style>
+	<head>
+		<!--the meta tag and the content selector allows the page to somewhat mobile responsive, 
+		more coding is required to access this information it is in our shared google document named 
+		Game Research-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-	</style>
+		<link rel="icon" type="image/png" href="../images/BeanBean-01.png">
+		
+		<meta charset="utf-8">
+		
+		<title>level_map</title>
+		
+		<link rel="stylesheet" type="text/css" href="../styles/levelMap.css">
+		
+	</head>
+	<body>
+			
+			
+ 		<div class="bankIcon">
+ 			<img onclick="Function()"  class="bankButton" src="../images/pblogo.png" width="10%">
+		</div>		
+		
+	 	
+                
 	
-	<!--Drop menu for settings-->
-	
-	<style>
-.dropbtn {
-	position: relative;
-	left: -232px;
-	bottom: 470px;
-	border-radius: 50px;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 10px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #f1f1f1}
-
-.show {display:block;}
-</style>
-	
-</head>
-<body>
-	
-			<!--Settings--><div class="dropdown">
- <img onclick="myFunction()" class="dropbtn" src="../images/settings.png" width="10%">
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
 		
                 
-		<ul class="buttons">
-			
-			<li class="button2">
-			
-				<a href="https://www.facebook.com/codecademy">
-					<img src="../images/pblogo.png" width="10%">
+		
+                
+		<div class="planet1Icon">
+		
+				<a href="../views/game-instructions.html">
+					
+					<img class="planet1" src="../images/planet1.png" width="30%">
+				
 				</a>
+		</div>
 			
-			</li>
+		<div class="planet2Icon">
+				<a href="../views/level1.html">
+					
+					<img class="planet2" src="../images/planet2.png" width="30%">
+				
+				</a> 
+		</div>
 		
-		</ul>	
-                
-	<ul class="planets">
-		<li>
-		<a href="../views/game-instructions.html">
-			<img class="planet1" src="../images/planet1.png" width="30%">
-		</a>
-		</li>
-		<li>
-		<a href="../views/level1.html">
-			<img class="planet2" src="../images/planet2.png" width="30%">
-		</a> 
-		</li>
-		<li>
-		<a href="https://www.theprivatebank.com/about-the-privatebank/">
-			<img class="planet3" src="../images/planet3.png" width="30%">
-		</a> 
-		</li>
-	</ul>
+		<div class="planet3Icon">
+				
+				<a href="https://www.theprivatebank.com/about-the-privatebank/">
+				
+					<img class="planet3" src="../images/planet3.png" width="30%">
+				
+				</a> 
+		</div>
 	
 	<!--Settings-->
 	
-	<div class="dropdown">
- <img onclick="myFunction()" class="dropbtn" src="../images/settings.png" width="10%">
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
+		<div class="dropdown1">
+ 			
+ 			<img onclick="myFunction()" class="dropbtn" src="../images/settings.png" width="10%">
+  
+  				<div id="myDropdown" class="dropdown-content">
+				    <a href="http://www.icstars.org/overview">i.c.stars|*</a>
+				    <a href="https://www.theprivatebank.com/about-the-privatebank/">The PrivateBank</a>
+				    <a href="http://www.msgen.com/assembled/company_story.html">Money Savvy Generation</a>
+  					<a href="http://www.bigshouldersfund.org/about-us/">Big Shoulders Fund</a>
+  				</div>
+		</div>
 		
 		<!--Settings JavaScript functions-->
 		
-	<script>
+		<script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
