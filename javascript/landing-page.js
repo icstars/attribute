@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
         
-        $(".briefOverview").hide();
+        $(".story").hide();
         $(".intro").hide();
         $(".name").hide();
         $(".gobutton").hide();
@@ -28,7 +28,7 @@ $(document).ready(function(){
         });
     }
     
-    logoScaleUp($bblogo);
+    // logoScaleUp($bblogo);
         
             //beanbeanlogo animation end
         

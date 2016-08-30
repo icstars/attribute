@@ -1,10 +1,10 @@
-    var img = new Image();
+    // var img = new Image();
 
-    img.onload = function() {
-    div.appendChild(img);
-        };
+    // img.onload = function() {
+    // div.appendChild(img);
+        // };
 
-    img.src = '../images/BeanBean-02.png';
+    // img.src = '../images/BeanBean-02.png';
     
     var avatar = document.querySelector("#avatar");
     var container = document.querySelector("#contentContainer");
@@ -60,14 +60,14 @@
 })
 
 ///////////////////////
-    var contentContainer,
+var contentContainer,
    ctx,
-   width = 600,
-   height = 600,
+   width = window.innerWidth,
+   height = 800,
    enemyTotal = 6,
    enemies = [],
    enemy_x = 50,
-   enemy_y = 0,
+   enemy_y = -20,
    enemy_w = 50,
    enemy_h = 50,
    speed = 3,
@@ -76,12 +76,18 @@
    rightKey = false,
    leftKey = false,
    upKey = false,
-   downKey = false,
-   ship_x = (width / 2) - 25, ship_y = height - 75, ship_w = 50, ship_h = 50;
+   downKey = false
+   
+window.onload = function() {
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("avatar");
+    ctx.drawImage(img, 10, 10);
+}
 
 for (var i = 0; i < enemyTotal; i++) {
 enemies.push([enemy_x, enemy_y, enemy_w, enemy_h, speed]);
-enemy_x += enemy_w + 30;
+enemy_x += enemy_w + Math.random()*window.innerWidth / 6; //75;
 enemy_y = Math.random()*100;
 }
 
@@ -116,12 +122,12 @@ function detectCollisions() {
     
     enemyX = enemyX + enemy_w / 2;
     enemyY = enemyY - enemy_h / 2;
-    var xPos = 120 / 2 + position.x;
+    var xPos = 90 / 2 + position.x;
     var yPos = 80 /2 + position.y;
 
     
-    var isCloseOnXPosition = Math.abs(xPos - enemyX) < 20;
-    var isCloseOnYPosition = Math.abs(yPos - enemyY) < 20;
+    var isCloseOnXPosition = Math.abs(xPos - enemyX) < 1;
+    var isCloseOnYPosition = Math.abs(yPos - enemyY) < 1;
      
     var rect = avatar.getBoundingClientRect();
     var rect_top = rect.top;
@@ -169,19 +175,6 @@ function gameLoop() {
  }
 }
 
-function keyDown(e) {
- if (e.keyCode == 39) rightKey = true;
- else if (e.keyCode == 37) leftKey = true;
- if (e.keyCode == 38) upKey = true;
- else if (e.keyCode == 40) downKey = true;
-}
-
-function keyUp(e) {
- if (e.keyCode == 39) rightKey = false;
- else if (e.keyCode == 37) leftKey = false;
- if (e.keyCode == 38) upKey = false;
- else if (e.keyCode == 40) downKey = false;
-}
 
 window.onload = init;
 //////////////////
