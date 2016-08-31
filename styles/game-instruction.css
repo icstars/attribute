@@ -10,6 +10,8 @@ body {
 div img {
     display: block;
     position: relative;
+    top:20px;
+    bottom: 200px;
     margin-left: auto;
     margin-right: auto;
 }
