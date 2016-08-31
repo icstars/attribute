@@ -19,10 +19,20 @@
                     crossorigin="anonymous">
 
             <link rel="stylesheet" type="text/css" href="../styles/landingpage.css">
-        
+            
+            
         </head>
         <body>
             
+            <div id="load_screen"><div id="loading">loading!</div></div>
+            
+            <script>
+                    window.addEventListener("load", function(){
+                	var load_screen = document.getElementById("load_screen");
+                	document.body.removeChild(load_screen);
+                    });
+            </script>
+        
             <figure class="star" >
                     <figure class="star-top"></figure>
                      <figure class="star-bottom"></figure>
@@ -34,18 +44,40 @@
                 
                 <img class="BeanBean" src="../images/BeanBean-01.png"><img>
                 
-                <p class="intro" id="hello">Hi! I'm Bean Bean!<img></p>
+                <p class="intro" id="hello">Hi! I'm Bean Bean!</p>
                 
-                <p class="story">  I need your help! What is your name?</p>
+                <p class="story"><span id = "insertName"></span>, I need your help
+                    <br>collecting cool coins
+                    <br>across the galaxy!
+                </p>
                 
                 <input  class="name" placeholder="what's your name?" type="text">
                 
                 </input>
                 
                 <a href="../views/level-map.html">
-                    <button class="gobutton">LETS PLAY!</button>
+                    <button class="gobutton">LET'S GO<span id = "insertName"></span>!</button>
                 </a>
             
+            </div>
+            
+            <div class="sponsors">
+                
+                <a href="http://www.bigshouldersfund.org/about-us/">
+                    <img class="thePrivateBank" src="../images/thePrivateBank.png"></img>
+                </a>
+                
+                <a href="http://www.msgen.com/assembled/company_story.html">
+                    <img class="msgLogo" src="../images/MSGlogo.gif"></img>
+                </a>
+                
+                <a href="https://www.theprivatebank.com/about-the-privatebank/">
+                    <img class="bigShouldersFund" src="../images/bigShouldersFund.png"></img>
+                </a>
+                
+                <a href="http://www.icstars.org/overview">
+                     <img class="icstarsLogo" src="../images/icstarslogo.gif"></img>
+                </a>
             </div>
             
         </body>

@@ -1,43 +1,17 @@
 
 $(document).ready(function(){
-        
-        $(".story").hide();
+     
         $(".intro").hide();
         $(".name").hide();
+        $(".story").hide();
         $(".gobutton").hide();
+       
         
-        
-            //beanbeanlogo animation
     
-    var $bblogo = $('.BeanBeanLogo'),
-        logoScale = 1.1,
-        logoHeight = $bblogo.height(), 
-        logoFormula = logoHeight*logoScale;
-        
-
-    function logoScaleUp($logo){
-        $logo.animate({height: logoFormula}, function (){
-            logoScaleDown($logo);
-            
-        });
-    }
-
-    function logoScaleDown($logo){
-        $logo.animate({height: logoHeight}, function (){
-            logoScaleUp($logo);
-        });
-    }
-    
-    // logoScaleUp($bblogo);
-        
-            //beanbeanlogo animation end
-        
-            //BeanBean growing and shrinking animation
-            
-    
-    var $img = $('.BeanBean'),
+//BeanBean growing and shrinking animation
+    var BeanBean = $('.BeanBean'),
         scale = 1.1,
-        h = $img.height(), 
+        h = BeanBean.height(), 
         sh = h*scale;
 
     function scaleUp($elt){
@@ -52,47 +26,26 @@ $(document).ready(function(){
         });
     }
     
-    scaleUp($img);
-    
-            //end of beanbean animation
+    scaleUp(BeanBean);
+//end of beanbean animation
         
         
-            //Click avatar for intro bubble
-            
+//Click avatar for intro bubble
     $(".BeanBean").one("click", function(){
+        $(".BeanBean").stop();
         $(".intro").show();
-        $(".BeanBean").stop(); 
-        $(".BeanBeanLogo").stop();
     });
-            //end of beanbean click function
-    
-    
-    
-            //animation affect for intro 
-    
+//end of beanbean click function
+
+//animation affect for intro 
     var $hello = $(".intro"),
-        scale_test = 1.3,
+        scale_test = 1.1,
         t = $hello.height(), 
         test = t*scale_test;
         tBot = $hello.width();
         botTest = tBot*scale_test;
     
-            //function that spreads width left
-        /*    
-    function testWidL($test){
-        $test.animate({width: botTest}, function (){
-            testWidR($test)  
-        });
-    }
     
-            //function that spreads width right
-    
-    function testWidR($test){
-        $test.animate({width: tBot}, function (){
-            testWidL($test);
-        });
-    }
-        */
     function scale_t_Up($test){
         $test.animate({height: test}, function (){
             scale_t_Down($test);
@@ -106,23 +59,62 @@ $(document).ready(function(){
         });
     }
     
-    setInterval(scale_t_Up($hello), 1000);
+    // setInterval(scale_t_Up($hello), 1000);
     //setInterval(testWidL($hello), 1000);
             //end of bubble1 animation
     
             //bubble1 click function
             
     $(".intro").one("click", function(){
-        $(".briefOverview").show();
         $(".intro").hide();
         $(".intro").stop();
+        $(".name").show();
     });
             //end of bubble1 click function
     
-            //bubble2 animation
+            
+            
+            //bubble2 click function
+            
+   
+    // // enter key = 13
+   
+    //   if(keys[38]) $(".story").show(); 
     
-        var $bubble_2 = $(".briefOverview"),
-        bub_scale = 1.2,
+    
+     var keys = [];
+     
+     
+     window.addEventListener("keydown", function(e){
+	    keys[e.keyCode] = true ;
+    }, false);
+    
+//     window.addEventListener("keyup", function(e){
+// 	delete keys[e.keyCode];
+//     }, false);
+    
+    $(".name").keydown("click", function() {
+        // $(".story").show();
+        // $(".gobutton").show();
+        if(keys[13]) {
+            $('.name').hide();
+                var player = $(".name").val();
+                $(".story").show();
+                $("#insertName").html(player);
+        } 
+       $(".story").one("click", function() {
+           var player = $(".name").val();
+           $(".story").hide();
+           $(".gobutton").show();
+       })
+        
+    });
+            //end of bubble2 click function
+        
+      //bubble2 animation
+    
+        var $bubble_2 = $(".story"),
+        bub_scale = 1.1,
         bub_h = $bubble_2.height(), 
         ba = bub_h*bub_scale;
 
@@ -141,22 +133,8 @@ $(document).ready(function(){
     bub_scaleUp($bubble_2); 
             
             //end of bubble2 animation
-            
-            //bubble2 click function
     
-    $(".briefOverview").one("click", function() {
-        logoScaleUp($bblogo);
-        $(".gobutton").show();
-        $(".name").show();
-        $(".briefOverview").hide();
-        $(".briefOverview").stop();
         
-    });
-            //end of bubble2 click function
-        
-    
-    
-    
    
         
          //star animation
@@ -207,6 +185,90 @@ $(document).ready(function(){
         node.val(node.val().replace(/[^a-z, 1-9]/g,'') ); }
     );
    
-});
-    
    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   //         //beanbeanlogo animation
+    
+    // var $bblogo = $('.BeanBeanLogo'),
+    //     logoScale = 1.1,
+    //     logoHeight = $bblogo.height(), 
+    //     logoFormula = logoHeight*logoScale;
+        
+
+    // function logoScaleUp($logo){
+    //     $logo.animate({height: logoFormula}, function (){
+    //         logoScaleDown($logo);
+            
+    //     });
+    // }
+
+    // function logoScaleDown($logo){
+    //     $logo.animate({height: logoHeight}, function (){
+    //         logoScaleUp($logo);
+    //     });
+    // }
+    
+    //  logoScaleUp($bblogo);
+        
+    //         //beanbeanlogo animation end
+    
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            //function that spreads width left
+        /*    
+    function testWidL($test){
+        $test.animate({width: botTest}, function (){
+            testWidR($test)  
+        });
+    }
+    
+            //function that spreads width right
+    
+    function testWidR($test){
+        $test.animate({width: tBot}, function (){
+            testWidL($test);
+        });
+    }
+        */
+        

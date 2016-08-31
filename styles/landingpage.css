@@ -1,5 +1,25 @@
+div#load_screen{
+	background: #3d90ec;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+
+div#load_screen > div#loading{
+    font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 25px;
+    text-align:center;
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+
+
 body {
-   
     background-image: url("../images/landingpagebackdrop-01.png");
     background-position:fixed;
     background-repeat: no-repeat;
@@ -8,6 +28,8 @@ body {
     overflow-y: hidden;
     background-position:top center;
 }
+
+
 .BeanBeanLogo {
     height:190px;
     display: block;
@@ -23,12 +45,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    
 }
 
 
 .intro {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    color:#bad75b;
+    color:#f2632c;
+    text-shadow: 1px 1px #eac8bb; 
+    box-shadow: -3px 4px #e8ce71 ;
+    background-color:#fce27b;
     position:relative;
     width: 210px;
     height: 40px;
@@ -37,37 +63,41 @@ body {
     margin-left:auto;
     margin-right: auto;
     text-align: center;
-    line-height: 50px;
-    border-radius: 55px;
-    background-color:#f4f4f4;
+    line-height: 40px;
+    border-radius: 50px;
     font-size:18px;
-    display: auto;
+    cursor:pointer;
     z-index: 1;
     
 }
 
 
-.briefOverview {
+.story {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    color:#bad75b;
+    color:#f2632c;
+    text-shadow: 1px 1px #eac8bb; 
+    box-shadow: 3px 4px #e8ce71;
     position:relative;
-    width: 240px;
-    height: 90px;
-    bottom:230px;
+    width: 250px;
+    height:110px;
+    bottom:380px;
     right: 200px;
     margin-left:auto;
     margin-right: auto;
     text-align: center;
-    line-height: 50px;
+    line-height: 25px;
+    padding-top:16px;
     border-radius: 50px;
-    background-color:#f4f4f4;
+    background-color:#fce27b;
     font-size:18px;
     display: block ;
     z-index: 1;
 }
+
 .name {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    color:#bad75b;
+    color:#3d90ec;
+    letter-spacing: 0.5px;
     margin-left:auto;
     margin-right: auto;
     text-align: center;
@@ -76,13 +106,17 @@ body {
     bottom:135px;
     position:relative;
     z-index: 1;
-    
+    outline-color:white;
 }
 
+#insertName {
+    color:#3d90ec
+}
 
 .gobutton {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-weight: bold;
+    color:white;
     font-size: 15px;
     display: block;
     position: relative;
@@ -100,6 +134,85 @@ body {
     box-shadow:0px 0px 5px #fff;
     text-decoration: none;
     background-color: 
+}
+
+.sponsors{
+    text-align: center;
+    z-index:1;
+}
+.thePrivateBank {
+   width: 50px;
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   display: inline-block;
+   opacity:0.5;
+   margin-top: 4em;
+}
+
+.thePrivateBank:hover {
+    position:relative;
+    width:100px;
+    height:auto;
+    margin-top: 4em;
+    opacity:1;
+    z-index:999;
+}
+
+.msgLogo{
+    width: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    opacity:0.5;
+    margin-top: 4em;
+}
+
+.msgLogo:hover {
+    position:relative;
+    width:100px;
+    height:auto;
+    margin-top: 4em;
+    opacity:1;
+    z-index:999;
+}
+.bigShouldersFund {
+    width: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    opacity:0.5;
+    margin-top: 4em;
+}
+
+.bigShouldersFund:hover {
+    position:relative;
+    width:100px;
+    height:auto;
+    margin-top: 4em;
+    opacity:1;
+    z-index:999;
+}
+
+.icstarsLogo {
+    width: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    opacity:0.5;
+    margin-top: 4em;
+}
+
+.icstarsLogo:hover {
+    position:relative;
+    width:100px;
+    height:auto;
+    margin-top: 4em;
+    opacity:1;
+    z-index:999;
 }
 .star {
     display: block;

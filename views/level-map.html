@@ -17,6 +17,14 @@
 	</head>
 	<body>
 			
+			<div id="load_screen"><div id="loading">loading!</div></div>
+            
+            <script>
+                    window.addEventListener("load", function(){
+                	var load_screen = document.getElementById("load_screen");
+                	document.body.removeChild(load_screen);
+                    });
+            </script>
 			
  		<div class="bankIcon">
  			<img onclick="Function()"  class="bankButton" src="../images/pblogo.png" width="10%">
