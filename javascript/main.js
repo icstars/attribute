@@ -38,6 +38,7 @@ function preload() {
 function create() {
     game.time.events.add(Phaser.Timer.SECOND * 30, timedOut, this);
     game.debug.text("Time remaining: " + game.time.events.duration, 32, 32);
+    //game.debug.text("Time remaining: " + game.time.events.duration, 32, 32);
     
     //  The scrolling starfield background
     starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');

@@ -98,7 +98,7 @@ $(document).ready(function(){
     $(".name").keydown("click", function() {
         // $(".story").show();
         // $(".gobutton").show();
-        if(keys[13]) {
+        if(keys[13]) { 
             $('.name').hide();
                 var player = $(".name").val();
                 $(".story").show();
