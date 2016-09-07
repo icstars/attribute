@@ -8,8 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
 	    <meta charset="utf-8">
-	
+	    
 	    <title>lvl1-instructions</title>
+	    
+	    <link rel="icon" type="image/png" href="../images/BeanBean-01.png">
 	    
 	    <link rel="stylesheet" type="text/css" href="../styles/game-instruction.css">
 	    
@@ -24,35 +26,51 @@
 	    
     </head>
     <body>
-
+        
+        <div id="load_screen">
+				<div id="loading"><img id="TeamLogo" src="../images/BeanBeanSymbol-01.png">loading!</div>
+			</div>
+            
+            <script>
+                    
+                    window.addEventListener("load", function(){
+                	var load_screen = document.getElementById("load_screen");
+                	document.body.removeChild(load_screen);
+                    });
+                    
+            </script>
+            
+            <figure class="star" >
+                    
+                    <figure class="star-top"></figure>
+                    
+                    <figure class="star-bottom"></figure>
+                
+            </figure>
+            
+            
         <div>
             <a href="../views/level-map.html">
                 <img src="../images/arrow.png" height="40px" width="40px">
             </a>
         </div>     
         
-            <div class="img">
-                <img src="../images/instruction.png" height="200px">
-            </div>
+            <img class="moon" src="../images/moon-01.png">
+            
+            <img class="instructions" src="../images/lvl1instructions.PNG">
+            
+            <img class="BeanBean" src="../images/BeanBean-01.png">
+            
+            
       
         
-            <p id ="lineOne">This is our first quest to add to our cool coin collection!</p>
+            <p id ="lineOne">This is our first quest to add to our cool coin collection! UH OH! OUR SHIP IS FAILING! We need tools to fix it! Collect as many tools as possible and dont get distracted! </p>
             
-            <p id ="lineTwo">UH OH!</p>
             
-            <p id ="lineThere">OUR SHIP IS FAILING!</p>
-            
-            <p id ="lineFour">We need tools to fix it!</p>
-            
-            <p id ="lineFive">OUR SHIP IS FAILING!</p>
-            
-            <p id ="lineSix">Collect as many tools as possible and dont get distracted!</p>
-        
-           <a href="game1.html">
+           <a href="index.html">
                     <button class="gobutton">GO!</button>
                 </a>
-                
-        </div>   
+        
 
     </body>
 </html>

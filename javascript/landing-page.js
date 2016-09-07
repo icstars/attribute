@@ -31,9 +31,10 @@ $(document).ready(function(){
         
         
 //Click avatar for intro bubble
-    $(".BeanBean").one("click", function(){
+    $(".clickMe").one("click", function(){
         $(".BeanBean").stop();
         $(".intro").show();
+        $(".clickMe").hide();
     });
 //end of beanbean click function
 
@@ -93,6 +94,7 @@ $(document).ready(function(){
 // 	delete keys[e.keyCode];
 //     }, false);
     
+    
     $(".name").keydown("click", function() {
         // $(".story").show();
         // $(".gobutton").show();
@@ -104,8 +106,8 @@ $(document).ready(function(){
         } 
        $(".story").one("click", function() {
            var player = $(".name").val();
-           $(".story").hide();
            $(".gobutton").show();
+           $(".story").stop();
        })
         
     });

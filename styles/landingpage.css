@@ -8,6 +8,13 @@ div#load_screen{
 	height: 1600px;
 }
 
+#TeamLogo{
+  height: 50px;
+  position: relative;
+  margin-bottom: 10px;
+  
+}
+
 div#load_screen > div#loading{
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-size: 25px;
@@ -29,6 +36,32 @@ body {
     background-position:top center;
 }
 
+.planetbackground {
+    position: absolute;
+    height: 900px;
+    left: -230px;
+    top:-430px;
+    opacity:0.9;
+    
+}
+/*.BeanBeanship {*/
+/*    position: relative;*/
+/*    height: 30px;*/
+/*    bottom: 20px;*/
+/*    right: 20px;*/
+/*    z-index: 1;*/
+/*}*/
+
+.moon{
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    height: 170px;
+    opacity: 0.1px;
+    /*width: 70px;*/
+}
+
+
 
 .BeanBeanLogo {
     height:190px;
@@ -37,8 +70,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    
 }
+
 .BeanBean {
     height:350px;
     display: block;
@@ -113,6 +146,24 @@ body {
     color:#3d90ec
 }
 
+.clickMe {
+    font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color:#fff600;
+    font-size:25px;
+    display: block;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    bottom:130px;
+    
+}
+
+.clickMe:hover {
+    color: white;
+}
+
 .gobutton {
     font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-weight: bold;
@@ -122,23 +173,34 @@ body {
     position: relative;
     margin-left:auto;
     margin-right:auto;
-    bottom:130px;
+    bottom:20px;
     background-color:#bad75b;
     border-radius: 5px;
     box-shadow:0px 0px 5px #595959;
     z-index: 1;
+    right: 200px;
+    bottom:380px;
     text-decoration: none;
 }
 
 .gobutton:hover {
     box-shadow:0px 0px 5px #fff;
     text-decoration: none;
-    background-color: 
 }
 
 .sponsors{
     text-align: center;
     z-index:1;
+    position:fixed;
+    bottom:0px;
+    left:42%;
+}
+
+.sponsorsP {
+    font-family:"Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-weight: bold;
+    color:#f2632c;
+    position: relative;
 }
 .thePrivateBank {
    width: 50px;
@@ -147,14 +209,13 @@ body {
    margin-right: auto;
    display: inline-block;
    opacity:0.5;
-   margin-top: 4em;
+   
 }
 
 .thePrivateBank:hover {
     position:relative;
     width:100px;
     height:auto;
-    margin-top: 4em;
     opacity:1;
     z-index:999;
 }
@@ -166,14 +227,13 @@ body {
     margin-right: auto;
     display: inline-block;
     opacity:0.5;
-    margin-top: 4em;
+    
 }
 
 .msgLogo:hover {
     position:relative;
     width:100px;
     height:auto;
-    margin-top: 4em;
     opacity:1;
     z-index:999;
 }
@@ -184,14 +244,12 @@ body {
     margin-right: auto;
     display: inline-block;
     opacity:0.5;
-    margin-top: 4em;
 }
 
 .bigShouldersFund:hover {
     position:relative;
     width:100px;
     height:auto;
-    margin-top: 4em;
     opacity:1;
     z-index:999;
 }
@@ -203,14 +261,12 @@ body {
     margin-right: auto;
     display: inline-block;
     opacity:0.5;
-    margin-top: 4em;
 }
 
 .icstarsLogo:hover {
     position:relative;
     width:100px;
     height:auto;
-    margin-top: 4em;
     opacity:1;
     z-index:999;
 }

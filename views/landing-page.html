@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <html>
         <head>
+            
             <!--the meta tag and the content selector allows the page to somewhat mobile responsive, 
 	        more coding is required to access this information it is in our shared google document named 
 	        Game Research-->
@@ -25,18 +26,24 @@
         <body>
             
             <div id="load_screen">
-                
-                <div id="loading">loading!</div>
-            
-            </div>
+				<div id="loading"><img id="TeamLogo" src="../images/BeanBeanSymbol-01.png">loading!</div>
+			</div>
             
             <script>
+                    
                     window.addEventListener("load", function(){
                 	var load_screen = document.getElementById("load_screen");
                 	document.body.removeChild(load_screen);
                     });
+                    
             </script>
-        
+            
+            <!--<img class="BeanBeanship" src="../images/BeanBean-02.png">-->
+            
+            <img class="planetbackground" src="../images/planetbackground.png">
+            
+            <img class="moon" src="../images/moon-01.png">
+            
             <figure class="star" >
                     
                     <figure class="star-top"></figure>
@@ -62,6 +69,8 @@
                 
                 </input>
                 
+                <p class="clickMe">CLICK ME!</p>
+                
                 <a href="../views/level-map.html">
                     <button class="gobutton">LET'S GO<span id = "insertName"></span>!</button>
                 </a>
@@ -69,6 +78,8 @@
             </div>
             
             <div class="sponsors">
+                
+                <p class="sponsorsP">Sponsors</p>
                 
                 <a href="http://www.bigshouldersfund.org/about-us/">
                     <img class="thePrivateBank" src="../images/thePrivateBank.png"></img>
@@ -85,6 +96,7 @@
                 <a href="http://www.icstars.org/overview">
                      <img class="icstarsLogo" src="../images/icstarslogo.gif"></img>
                 </a>
+            
             </div>
             
         </body>

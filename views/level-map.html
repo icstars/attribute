@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		
 		<!--the meta tag and the content selector allows the page to somewhat mobile responsive, 
 		more coding is required to access this information it is in our shared google document named 
 		Game Research-->
@@ -14,10 +15,24 @@
 		
 		<link rel="stylesheet" type="text/css" href="../styles/levelMap.css">
 		
+		<script type="text/javascript" src="../javascript/level-map.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>            
+		
+		 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+		 
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+                integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+                    crossorigin="anonymous">
+                    
 	</head>
 	<body>
+		
+			<div id="load_screen">
+				
+				<div id="loading"><img id="TeamLogo" src="../images/BeanBeanSymbol-01.png">loading!</div>
 			
-			<div id="load_screen"><div id="loading">loading!</div></div>
+			</div>
             
             <script>
                     window.addEventListener("load", function(){
@@ -26,81 +41,62 @@
                     });
             </script>
 			
- 		<div class="bankIcon">
- 			<img onclick="Function()"  class="bankButton" src="../images/pblogo.png" width="10%">
-		</div>		
-		
-	 	
-                
-	
-		
-                
-		
-                
-		<div class="planet1Icon">
-		
-				<a href="../views/game-instructions.html">
-					
-					<img class="planet1" src="../images/planet1.png" width="30%">
-				
-				</a>
-		</div>
-			
-		<div class="planet2Icon">
-				<a href="../views/level1.html">
-					
-					<img class="planet2" src="../images/planet2.png" width="30%">
-				
-				</a> 
-		</div>
-		
-		<div class="planet3Icon">
-				
-				<a href="https://www.theprivatebank.com/about-the-privatebank/">
-				
-					<img class="planet3" src="../images/planet3.png" width="30%">
-				
-				</a> 
-		</div>
-	
-	<!--Settings-->
-	
-		<div class="dropdown1">
+			<div id="space">
+			  <div class="stars"></div>
+			  <div class="stars"></div>
+			  <div class="stars"></div>
+			  <div class="stars"></div>
+			  <div class="stars"></div>
+			</div>
+ 		
+ 		<div class="navigationBar">
  			
- 			<img onclick="myFunction()" class="dropbtn" src="../images/settings.png" width="10%">
-  
-  				<div id="myDropdown" class="dropdown-content">
-				    <a href="http://www.icstars.org/overview">i.c.stars|*</a>
-				    <a href="https://www.theprivatebank.com/about-the-privatebank/">The PrivateBank</a>
-				    <a href="http://www.msgen.com/assembled/company_story.html">Money Savvy Generation</a>
-  					<a href="http://www.bigshouldersfund.org/about-us/">Big Shoulders Fund</a>
-  				</div>
+ 			<img class="BeanBeanSymbol" src="../images/BeanBeanSymbol-01.png">
+ 			
+ 			<img onclick="Function()"  class="bankButton" src="../images/pblogo.png" width="10%">
+			
+			<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">
+				<img src="../images/settings.png"></button>
+			  <div id="myDropdown" class="dropdown-content">
+			    <a href="#home">Profile</a>
+			    <a href="#about">About</a>
+			    <a href="#contact">Log Out</a>
+			  </div>
+			</div>
+			
+		
+ 			
+ 				
 		</div>
 		
-		<!--Settings JavaScript functions-->
+			
+			<!--<p class="moonReturn">Log-out</p>-->
 		
-		<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+		<a  href="../views/landing-page.html">
+			<img class="moon" src="../images/moon-01.png">
+		</a>
+		
+	 	<div class="theLevels">
+					
+				
+				<a href="../views/game-instructions.html">
+					<img class="planet1" src="../images/planet1.png" >
+				</a>
+				
+				<img class="lock1" src="../images/lock-01.png">
+				<!--<a  href="../views/level1.html">-->
+					<img class="planet2"  src="../images/planet2.png" >
+				<!--</a>-->
+				
+				<img class="lock2" src="../images/lock-01.png">
+				<!--<a href="https://www.theprivatebank.com/about-the-privatebank/">-->
+					<img class="planet3"  src="../images/planet3.png">
+				<!--</a>-->
+		</div>
+		
+	
+		
 
 </body>
 </html>
